@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Coloring Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Graph Coloring Visualization</h1>
+        <p>Visualize the backtracking algorithm for the graph coloring problem</p>
+    </header>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="control-section">
+                <h3>Graph Controls</h3>
+                <button id="addNodeBtn">Add Node</button>
+                <button id="addEdgeBtn">Add Edge</button>
+                <button id="clearBtn">Clear Graph</button>
+            </div>
+            
+            <div class="control-section">
+                <h3>Simulation Controls</h3>
+                <button id="startBtn">Start Simulation</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="resetBtn" disabled>Reset</button>
+                
+                <div class="slider-container">
+                    <label for="speedSlider">Speed:</label>
+                    <input type="range" id="speedSlider" min="1" max="10" value="5">
+                </div>
+            </div>
+            
+            <div class="control-section">
+                <h3>Colors Used</h3>
+                <div class="color-palette" id="colorPalette"></div>
+            </div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="graphCanvas"></canvas>
+            <div class="mode-indicator" id="modeIndicator">Mode: Add Node</div>
+        </div>
+    </div>
+    
+    <div class="results">
+        <h2>Results</h2>
+        <div class="results-content">
+            <div class="results-stats" id="resultsStats">
+                <p>Number of colors: <span id="colorCount">0</span></p>
+                <p>Number of solutions: <span id="solutionCount">0</span></p>
+                <p>Steps taken: <span id="stepCount">0</span></p>
+            </div>
+            <div class="results-steps" id="resultsSteps">
+                <p>Simulation steps will appear here...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
